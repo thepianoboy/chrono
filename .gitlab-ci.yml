@@ -1,6 +1,6 @@
 image: 
   name: archlinux/base
-  entrypoint: ["/usr/sbin/sh"]
+  entrypoint: ["/usr/bin/bash", "-c"]
 
 before_script:
   - uname -a
