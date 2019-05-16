@@ -1,8 +1,9 @@
 image: 
   name: archlinux/base
-  entrypoint: ["/bin/bash"]
+  entrypoint: ["/usr/sbin/sh"]
 
 before_script:
+  - uname -a
   - sudo pacman -Syyu --noconfirm base-devel cuda git cmake glfw glm glew glut irrlicht wget boost fish python python-pip openmpi swig
   - sudo ldconfig
   - wget https://bitbucket.org/blaze-lib/blaze/downloads/blaze-3.5.tar.gz
